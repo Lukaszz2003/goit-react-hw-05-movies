@@ -13,3 +13,74 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.linkMovies,
+.linkHome {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+.linkMovies:hover,
+.linkHome:hover {
+  font-weight: 700;
+}
+.linkMovies.active,
+.linkHome.active {
+  border-bottom: 4px solid rgb(243, 195, 195);
+  font-weight: 700;
+}
+
+.linkHome {
+  margin-right: 30px;
+}
+
+.linkAddIfo {
+  padding: 10px 20px;
+  background-color: white;
+  color: lightcoral;
+  border: 2px solid lightcoral;
+
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 10px;
+}
+.linkAddIfo:hover,
+.linkAddIfo.active {
+  background-color: lightcoral;
+  color: white;
+  border: 2px solid transparent;
+}
