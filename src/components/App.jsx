@@ -1,16 +1,17 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-
 import Appbar from './AppBar/AppBar';
 
 const HomePage = lazy(() => import('./HomePage/HomePage'));
 
 const MoviesPage = lazy(() => import('../views/MoviesPage'));
+
 const MovieDetailsPage = lazy(() =>
   import('./MovieDetailsPage/MovieDetailsPage')
 );
+
 const Reviews = lazy(() => import('./Reviews/Reviews'));
-const Cast = lazy(() => import('./Cast/Cast'));
+const Cast = lazy(() => import('./Cast/Cast' /* webpackChunkName: "Cast" */));
 
 export const App = () => {
   return (
