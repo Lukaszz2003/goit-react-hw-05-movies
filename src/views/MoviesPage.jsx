@@ -9,7 +9,7 @@ import PageHeading from 'components/Pageheading/Pageheading';
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [movies, setMovies] = useState({});
+  const [movies, setMovies] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -32,7 +32,7 @@ const MoviesPage = () => {
           setMovies(results);
         })
         .catch(error => {
-          setError('We do not find some movies');
+          setError('Ooops. Something went wrong...');
           console.log(error);
         })
         .finally(setLoading(false));
@@ -43,6 +43,7 @@ const MoviesPage = () => {
   function onSubmit(value) {
     setSearchParams({ query: `${value}` });
   }
+
   return (
     <>
       <Container>

@@ -1,0 +1,10 @@
+.list {
+  list-style: auto;
+  color: greenyellow;
+}
+
+.list_link {
+  color: rgb(143, 32, 202);
+  text-decoration: black;
+  font-size: initial;
+}

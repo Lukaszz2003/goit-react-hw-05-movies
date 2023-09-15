@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesDetails } from 'services/movies-api';
-
 import PageHeading from 'components/Pageheading/Pageheading';
 
 export default function MovieDetailsPage() {
@@ -15,14 +14,9 @@ export default function MovieDetailsPage() {
   const getYear = () => new Date(movie.release_date).getFullYear();
 
   const { movieId } = useParams();
-
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
-
-  let activeClassName = {
-    color: '#2196f3',
-  };
 
   const handleClick = () => navigate(location?.state?.from ?? '/');
 
@@ -33,7 +27,7 @@ export default function MovieDetailsPage() {
         setMovie(res);
       })
       .catch(error => {
-        setError('We do not find some movies');
+        setError('Ooops. Something went wrong...');
         console.log(error);
       })
       .finally(() => setLoading(false));
@@ -43,11 +37,10 @@ export default function MovieDetailsPage() {
     <>
       <Container>
         <button onClick={handleClick} className={s.backButton}>
-          Go Back
+          Go back
         </button>
 
         {movie && <PageHeading text={movie.title} />}
-
         {loading && 'Loading ...'}
         {error && <div>{error}</div>}
         {movie && (
@@ -70,18 +63,18 @@ export default function MovieDetailsPage() {
           <h2>Additional Information</h2>
           <NavLink
             to={`/movies/${movieId}/reviews`}
-            style={({ isActive }) => (isActive ? activeClassName : undefined)}
+            // style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.reviews}>REVIEWS</p>
+            <p className={s.reviews}>Reviews</p>
           </NavLink>
 
           <NavLink
             to={`/movies/${movieId}/cast`}
-            style={({ isActive }) => (isActive ? activeClassName : undefined)}
+            // style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.cast}>CAST</p>
+            <p className={s.cast}>Cast</p>
           </NavLink>
           <hr />
           <Outlet />

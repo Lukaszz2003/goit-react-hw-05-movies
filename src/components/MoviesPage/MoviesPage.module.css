@@ -1,11 +1,11 @@
 .searchForm {
-  margin-left: 35%;
-  margin-right: 30%;
+  justify-items: center;
+  display: grid;
 }
 .searchInput {
   padding: 10px 15px;
   border-radius: 10px;
-  border: 3px solid #2196f3;
+  border: 1px solid;
   margin-right: 20px;
   font-size: 20px;
   outline: transparent;
@@ -18,14 +18,17 @@
   cursor: pointer;
   padding: 8px 15px;
   margin-bottom: 15px;
-  box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
   transition: box-shadow 250ms linear;
   border-radius: 10px;
-  border: 3px solid #2196f3;
   font-weight: bold;
+  margin-top: 5px;
+  border: 1px solid aqua;
+  background-color: black;
+  color: greenyellow;
 }
 
 .searchButton:hover {
-  background-color: #2196f3;
-  color: white;
+  background-color: greenyellow;
+  color: black;
+  border: 1px solid black;
 }

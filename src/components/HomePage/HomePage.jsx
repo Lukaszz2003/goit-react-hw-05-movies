@@ -18,7 +18,7 @@ export default function GetTrendingMovies() {
           setMovies(results);
         })
         .catch(error => {
-          setError('We do not find some movies');
+          setError('Ooops. Something went wrong...');
           console.log(error);
         })
         .finally(() => setLoading(false));
@@ -27,11 +27,11 @@ export default function GetTrendingMovies() {
   }, []);
 
   const isNotFound = !loading && !movies.length;
-
   return (
     <>
       <Container>
         <PageHeading text={'Trending Movies'}></PageHeading>
+
         {loading && 'Loading ...'}
         {isNotFound && <NotFoundView />}
         {error && <div>{error}</div>}

@@ -4,11 +4,11 @@
   padding: 12px;
   font-weight: 800;
   color: black;
-  font-size: 18px;
   font-style: italic;
+  font-size: larger;
 }
 
 .link :focus,
 .link:hover {
-  color: #2196f3;
+  color: greenyellow;
 }

@@ -1,40 +1,43 @@
 .backButton {
   cursor: pointer;
-  width: 80px;
   text-align: center;
-  font-weight: bold;
   padding: 8px 15px;
   margin-bottom: 15px;
-  box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
   transition: box-shadow 250ms linear;
   border-radius: 10px;
-  border: 1px solid #2196f3;
+  border: 1px solid aqua;
+  background-color: black;
+  color: greenyellow;
 }
 
 .backButton:hover {
-  background-color: #2196f3;
-  color: white;
+  background-color: greenyellow;
+  color: black;
+  border: 1px solid black;
 }
 
 .reviews {
   display: inline-block;
   padding: 8px 15px;
   border-radius: 10px;
-  border: 1px solid #2196f3;
+  border: 1px solid aqua;
   margin-right: 30px;
-  font-weight: bold;
+  background-color: black;
+  color: greenyellow;
 }
 
 .cast {
   display: inline-block;
   padding: 8px 28px;
   border-radius: 10px;
-  border: 1px solid #2196f3;
-  font-weight: bold;
+  border: 1px solid aqua;
+  background-color: black;
+  color: greenyellow;
 }
 
 .reviews:hover,
 .cast:hover {
-  background-color: #2196f3;
-  color: white;
+  background-color: greenyellow;
+  color: black;
+  border: 1px solid black;
 }
