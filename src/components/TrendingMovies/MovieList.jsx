@@ -18,7 +18,6 @@ const MovieList = ({ movies, prevLocation }) => {
 };
 
 MovieList.propTypes = {
-  // prevLocation: PropTypes.object.isRequired,
   movies: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,

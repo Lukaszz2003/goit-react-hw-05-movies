@@ -43,7 +43,7 @@ export default function MovieDetailsPage() {
     <>
       <Container>
         <button onClick={handleClick} className={s.backButton}>
-          Go back
+          Go Back
         </button>
 
         {movie && <PageHeading text={movie.title} />}
