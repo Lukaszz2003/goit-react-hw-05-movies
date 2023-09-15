@@ -73,7 +73,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.reviews}>Reviews</p>
+            <p className={s.reviews}>REVIEWS</p>
           </NavLink>
 
           <NavLink
@@ -81,7 +81,7 @@ export default function MovieDetailsPage() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <p className={s.cast}>Cast</p>
+            <p className={s.cast}>CAST</p>
           </NavLink>
           <hr />
           <Outlet />
